@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-player-search-box',
-  templateUrl: './player-search-box.component.html',
-  styleUrls: ['./player-search-box.component.css']
+	selector: 'app-player-search-box',
+	templateUrl: './player-search-box.component.html',
+	styleUrls: ['./player-search-box.component.css']
 })
 export class PlayerSearchBoxComponent implements OnInit {
+	@Output() sendNameEvent = new EventEmitter<string>(true);
+	name: string;
+	constructor() { }
 
-  constructor() { }
+	ngOnInit() {
+	}
 
-  ngOnInit() {
-  }
+	setName(value: string) {this.name = value}
+	sendName() {this.sendNameEvent.emit(this.name)}
 
 }

@@ -1,7 +1,3 @@
-body {
-	background-color: #3f5373;
-}
-
 div {
 	padding: 5px;
 	margin: 5px;
@@ -12,71 +8,4 @@ button:disabled {
 	color: #818181;
 	background-color: rgba(255, 110, 30, 60%);
 	border-color: rgba(255, 110, 30, 60%);
-}
-
-.right-align {
-	text-align: right;
-	justify-content: right;
-	align-items: right;
-}
-
-.left-align {
-	text-align: left;
-	justify-content: left;
-	align-items: left;
-}
-
-.center-align {		
-	justify-content: center;
-	align-items: center;
-}
-
-.column {
-	flex-direction: column;
-}
-
-.flex-container {
-	display: flex;
-	border: dashed grey;
-}
-
-.search-box {
-	text-align: center;
-	border: solid #e1e1e1;
-	border-width: 0.1em;
-	border-radius: 10em 1em 10em 1em;
-	width: 75%;
-	font-size: 1.5em;
-	padding: 0.5em;
-}
-
-.search {
-	height: 1.75em;
-	width: 15em;
-	position: relative;
-	bottom: 0.3em;
-	border-radius: 10em 1em 10em 1em;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-	font-size: 0.6em;
-}
-
-.compare-btn-container {	
-	text-align: center;
-}
-
-.compare-btn {
-	font-size: 1.5em;
-	border-radius: 2em;
-	padding: 0.35em;
-	background-color: rgba(255, 110, 30, 1);
-	border-color: rgba(255, 110, 30, 100%);
-	color: #0033aa;
-}
-
-.card {
-	box-shadow: 0 4px 8px 0 rgba(255, 110, 30, 0.4), 0 6px 20px 0 rgba(255, 155, 50, 0.25);
-  	text-align: center;
-  	margin: .7em;
-  	background-color: #385C93;
 }

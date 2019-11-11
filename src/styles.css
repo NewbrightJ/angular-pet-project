@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.right-align {
+	text-align: right;
+	justify-content: right;
+	align-items: right;
+}
+
+.left-align {
+	text-align: left;
+	justify-content: left;
+	align-items: left;
+}
+
+.center-align {		
+	justify-content: center;
+	align-items: center;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.flex-container {
+	display: flex;
+	border: dashed grey;
+}

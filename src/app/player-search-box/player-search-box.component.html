@@ -1,1 +1,6 @@
-<p>player-search-box works!</p>
+<div class="center-align">
+	<div class="search-box">
+		Enter a name: <input #inputBox class="search" type="text" (keyup)="setName(inputBox.value)" (focusout)="sendName()" placeholder="Type here...">
+		{{name}}
+	</div>
+</div>

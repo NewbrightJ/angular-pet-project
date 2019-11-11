@@ -1,49 +1,18 @@
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
-  <script src="mainApp.js"></script>
 </head>
 
-<body ng-app="mainApp" ng-controller="mainCtrl">
-<div class="flex-container">
-  <div class="flex-container center-align" style="width: 50%;">
-    <div class="search-box">
-      Enter a name: 
-      <input class="search" type="text" ng-model="name1" ng-keyup="checkNames()" placeholder="Type here...">
-    </div>
-  </div>
-  <div class="flex-container center-align" style="width: 50%">
-    <div class="search-box">
-      And another one: 
-      <input class="search" type="text" ng-model="name2" ng-keyup="checkNames()" placeholder="Type here...">
-    </div>  
-  </div>
-</div>
-
-<div class="compare-btn-container">
-  <button class="compare-btn" ng-click="compare()" ng-disabled="!btnReady">Compare</button>
-</div>
-
-<div ng-controller="httpCtrl">
-  <button ng-click="getSummonerByName(name1)">Http</button>
-</div>
+<body>
+  <app-player-search-box (sendNameEvent)="testEventMethod('name1', $event)"></app-player-search-box>
+  <app-player-search-box (sendNameEvent)="testEventMethod('name2', $event)"></app-player-search-box>
+  <app-compare-button [name1]="test1" [name2]="test2"></app-compare-button>
 
 <div class="flex-container">
-  <div class="flex-container column card" ng-show="show" ng-repeat="p in playerInformation" style="width: 50%;">
-    <div>
-      Name: {{p.name}}
-    </div>
-    <div>
-      Current Rank: {{p.rank}}
-    </div>
-    <div>
-      Wins: {{p.wins}}
-    </div>
-  </div>
+  <app-player-card></app-player-card>
+  <app-player-card></app-player-card>
 </div>
 
 Name1: {{name1}}<br/>
-Name2: {{name2}}
+Name2: {{name2}}<br/>
 
 </body>
 <router-outlet></router-outlet>
